@@ -110,9 +110,14 @@ export default defineComponent({
         background: "rgba(0, 0, 0, 0.7)",
       });
       await this.delay(1000);
-      await axios.get("http://localhost:8000/products").then((response) => {
-        this.data = response.data;
-      });
+      await axios
+        .get("http://localhost:8000/products")
+        .then((response) => {
+          this.data = response.data;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
       loading.close();
     },
     sortProduct(arr: any, comparison_type: string, comparison_data: string) {

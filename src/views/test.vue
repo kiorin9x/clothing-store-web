@@ -13,6 +13,9 @@ const getProductList = async () => {
     .get("https://jsonplaceholder.typicode.com/posts/")
     .then((response) => {
       data.value = response.data;
+    })
+    .catch((error) => {
+      console.log(error);
     });
   loading.close();
 };

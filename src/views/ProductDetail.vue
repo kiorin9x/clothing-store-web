@@ -36,6 +36,9 @@ const getProductList = async () => {
       data.value = response.data;
       DETAIL_PRODUCT_BY_COLOR.value = data.value.variation[0];
       price.value = findHighestPrice(data.value);
+    })
+    .catch((error) => {
+      console.log(error);
     });
   loading.close();
 };
