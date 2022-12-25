@@ -8,7 +8,7 @@ This project should help get you started developing with Vue 3 in Vite.
 
 ## Note
 
-For best practice you must replace `database.json` in your server api by my `database.json` above
+For best practice you must replace `database.json` in your server api with my `database.json` above
 
 ## Customize configuration
 
